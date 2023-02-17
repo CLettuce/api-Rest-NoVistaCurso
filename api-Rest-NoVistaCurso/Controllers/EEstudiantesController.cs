@@ -34,6 +34,14 @@ namespace api_Rest_NoVistaCurso.Controllers
 
             return Ok(eEstudiantes);
         }
+        //Busqueda por nombre
+        [ResponseType(typeof(EEstudiantes))]
+        public List<EEstudiantes> GetEEstudiantes(string name)
+        {
+            var movies = db.EEstudiantes.Where(p => p.Nombre.Contains(name)).ToList();
+            return movies;
+        }
+
 
 
         // PUT: api/EEstudiantes/5
