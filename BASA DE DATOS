@@ -1,0 +1,22 @@
+CREATE DATABASE [CURSO]
+GO
+USE [CURSO]
+GO
+/****** Object:  Table [dbo].[EEstudiantes]    Script Date: 10/3/2023 18:52:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[EEstudiantes](
+	[IdEstudiante] [int] IDENTITY(1,1) NOT NULL,
+	[Matricula] [nvarchar](128) NOT NULL,
+	[Nombre] [nvarchar](50) NOT NULL,
+	[Apellido] [nvarchar](50) NOT NULL,
+	[Telefono] [nvarchar](16) NOT NULL,
+	[Direccion] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_EEstudiantes] PRIMARY KEY CLUSTERED 
+(
+	[IdEstudiante] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
